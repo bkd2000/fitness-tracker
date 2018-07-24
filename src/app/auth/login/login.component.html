@@ -1,3 +1,11 @@
-<p>
-  login works!
-</p>
+<section class="login-form" fxLayoutAlign="center center">
+  <form fxLayout="column" #fo="ngForm" (ngSubmit)="onSubmit(fo)">
+    <mat-form-field>
+      <input matInput placeholder="username" type="text" ngModel name="userName" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="password" type="password" ngModel name="password" required>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Log in</button>
+  </form>
+</section>
